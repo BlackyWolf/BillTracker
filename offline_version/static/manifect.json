@@ -1,0 +1,17 @@
+{
+    "background_color": "#7ba769",
+    "description": "Helps track bills",
+    "display": "standalone",
+    "icons": [
+        {
+            "sizes": "512*512",
+            "src": "logo_512.png",
+            "type": "image/png"
+        }
+    ],
+    "name": "bill-tracker",
+    "scope": "/",
+    "short_name": "bt",
+    "start_url": "/",
+    "theme_color": "#f4ce4a"
+}
