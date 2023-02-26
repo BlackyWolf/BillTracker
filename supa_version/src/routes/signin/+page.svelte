@@ -1,40 +1,39 @@
 <script lang="ts">
     import type { ActionData } from './$types';
 
-
     export let form: ActionData;
-
-    console.log(form);
 </script>
 
 <div class="flex flex-grow flex-col justify-center py-12 sm:px-6 lg:px-8 bg-slate-200">
-    <div class="sm:mx-auto sm:w-full sm:max-w-md">
-        <img
-            class="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-        />
+    <div class="sm:mx-auto sm:w-full sm:max-w-md flex items-center">
+        <i class="fa-duotone fa-envelope-open-dollar fa-3x text-indigo-600"></i>
 
-        <h2
-            class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900"
-        >
-            Sign in to your account
-        </h2>
-
-        <p class="mt-2 text-center text-sm text-gray-600">
-            Or
-            <a
-                href="#"
-                class="font-medium text-indigo-600 hover:text-indigo-500"
+        <div class="ml-6">
+            <h2
+                class="text-3xl font-bold tracking-tight text-gray-900"
             >
-                start your 14-day free trial
-            </a>
-        </p>
+                Sign in to your account
+            </h2>
+
+            <p class="mt-2 text-sm text-gray-600">
+                Or
+                <a
+                    href="/signup"
+                    class="font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                    signup for free
+                </a>
+            </p>
+        </div>
     </div>
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form class="space-y-6" method="POST">
+                {#if (form?.error)}
+                    <p class="text-red-600 font-semibold text-sm mb-4">{form.error}</p>
+                {/if}
+
                 <div>
                     <label
                         for="email"
@@ -94,10 +93,11 @@
 
                     <div class="text-sm">
                         <a
-                            href="#"
+                            href="/reset-password"
                             class="font-medium text-indigo-600 hover:text-indigo-500"
-                            >Forgot your password?</a
                         >
+                            Forgot your password?
+                        </a>
                     </div>
                 </div>
 

@@ -16,13 +16,25 @@
 <div class="flex flex-grow">
     <nav class="flex flex-col w-64 border-r border-gray-400">
         <a href="/bills" class="link">
-            <i class="fa-duotone fa-file-invoice-dollar fa-2x mr-4 text-red-600"></i>
+            <i class="fa-duotone fa-circle-info fa-fw fa-2x mr-4 text-blue-600"></i>
+
+            <span class="font-semibold">About</span>
+        </a>
+
+        <a href="/bills" class="link">
+            <i class="fa-duotone fa-file-invoice-dollar fa-fw fa-2x mr-4 text-red-600"></i>
 
             <span class="font-semibold">Bills</span>
         </a>
+
+        <a href="/templates" class="link">
+            <i class="fa-duotone fa-file-invoice fa-fw fa-2x mr-4 text-gray-600"></i>
+
+            <span class="font-semibold">Templates</span>
+        </a>
     </nav>
 
-    <main class="p-8">
+    <main class="p-8 flex-grow relative">
         <slot />
     </main>
 </div>
