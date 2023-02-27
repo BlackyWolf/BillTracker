@@ -1,6 +1,29 @@
 interface Frequency {
-    quantity: number;
-    type: 'days' | 'weeks' | 'months' | 'years';
+
+}
+
+interface Annually {
+    day: number;
+    month: number;
+}
+
+interface Quarterly {
+    day: number;
+    startingMonth: number;
+}
+
+interface BiWeekly {
+    day: number;
+}
+
+interface Monthly {
+    day: number;
+    endOfMonth: boolean;
+    startingMonth: number;
+}
+
+interface Ticker {
+
 }
 
 export interface Template {
@@ -8,5 +31,5 @@ export interface Template {
     amount: number;
     description: string;
     enabled: boolean;
-    frequency: Frequency;
+    frequencies: Frequency;
 }
